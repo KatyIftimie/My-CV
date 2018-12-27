@@ -1,0 +1,26 @@
+-
+    var myFullName = 'Mariana Iftimie'
+    var myJobTitle = 'shafu la cai'
+    var socialList = [
+        {icon: 'facebook2', url: 'https://facebook.com/katyiftimie'},
+        {icon: 'twitter', url: 'https://twitter.com'},
+        {icon: 'youtube', url: 'https://youtube.com'},
+        {icon: 'google-plus2', url: 'https://google.com'},
+        {icon: 'github', url: 'https://github.com/KatyIftimie'},
+        {icon: 'stackoverflow', url: 'https://stackoverflow.com/'},
+        {icon: 'skype', url: 'https://skype.com'},
+        {icon: 'linkedin2', url: 'https://linkedin.com'},
+        {icon: 'earth', url: 'https://earth.google.com/web/'},
+    ]
+div#landing-page
+div.landing-page
+    .landing-page__wrapper
+        h1.landing-page__name=myFullName
+        //- h1.landing-page__name #{myFullName}
+        //- with the # tag one you can add text before or after
+        h2.landing-page__title=myJobTitle
+        ul.landing-page__social
+            each social in socialList
+                li.landing-page__item
+                    label.landing-page__label(for="")
+                        span(class=`my-cv__icon--${social.icon}`)
