@@ -1,0 +1,50 @@
+//- data comes here
+-
+    var header = '#about me'
+    var imagePath = "asset/image/katy.jpg"
+    var myFullName = "Mariana Iftimie"
+    var myTitle = "Shafu la cai"
+    var slogan = '2 maxim 6 cai frumosi trag la caruta.'
+    var achivement = {
+        title: 'digdi',
+        content: 'dfdfsgsgrgrs'
+    }
+
+    var coolStuff = {
+        title: 'ttjg',
+        buttonList: [
+            {
+                url: 'https://github.com/KatyIftimie',
+                icon: 'github',
+                label: 'Click to visit the GitHub project sourse'
+            },
+            {
+                url: 'asset\doc\cpd_accreditation_doc.pdf',
+                icon: 'file-word',
+                label: 'Click to download the full accreditation document'
+            },
+            {
+                url: 'asset\doc\eticket_13551863.pdf',
+                icon: 'file-word',
+                label: 'Click to download the tickets'
+            }
+        ]
+    }
+//- the view comes here
+
+#about-me
+.about-me
+    .about-me__header=header
+    .about-me__avatar-wrapper
+        img.about-me__avatar(src=imagePath)
+    .about-me__full-name=myFullName
+    .about-me__full-title=myTitle
+    .about-me__slogan=slogan
+
+    .about-me__title=achivement.title
+    .about-me__content=achivement.content
+
+    each button in coolStuff.buttonList
+        a(href=button.url)
+            span=button.label
+            span(class=`.my-cv__icon--${button.icon}`)
