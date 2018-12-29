@@ -1,7 +1,7 @@
 //- data comes here
 -
     var header = '#about me'
-    var imagePath = "asset/image/katy.jpg"
+    var imagePath = "asset/image/katy3.jpg"
     var myFullName = "Mariana Iftimie"
     var myTitle = "Shafu la cai"
     var slogan = '2 maxim 6 cai frumosi trag la caruta.'
@@ -11,7 +11,7 @@
     }
 
     var coolStuff = {
-        title: 'ttjg',
+        title: 'grab cool stuff',
         buttonList: [
             {
                 url: 'https://github.com/KatyIftimie',
@@ -44,7 +44,9 @@
     .about-me__title=achivement.title
     .about-me__content=achivement.content
 
-    each button in coolStuff.buttonList
-        a(href=button.url)
-            span=button.label
-            span(class=`.my-cv__icon--${button.icon}`)
+    .about-me__title=coolStuff.title
+    .about.me__link-list
+        each button in coolStuff.buttonList
+            a(href=button.url)
+                span=button.label
+                span(class=`.my-cv__icon--${button.icon}`)

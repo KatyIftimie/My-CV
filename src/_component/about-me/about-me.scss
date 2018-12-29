@@ -1,3 +1,24 @@
-#about-me {
-    color: red;
+.about-me {
+    background-image: radial-gradient(ellipse, #66e2b3, #2bb580);
+}
+
+.about-me__header {
+    color:white;
+    padding: 1rem 2rem;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.about-me__avatar {
+    border-radius: 50%;
+    width:100%;
+    border: 0.5rem solid #66e2b3;
+}
+
+.about-me__avatar-wrapper {
+    max-width: 50%;
+    margin: 1rem auto;
+    border: 0.5rem solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    
 }
