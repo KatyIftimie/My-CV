@@ -1,5 +1,37 @@
 -
     var awardHeader = '#awards'
+    var awardList = [
+        {
+            title: 'The best horse',
+            description: 'I have participated in the race and won the 1st place with my horse',
+            location: 'Windsdor races',
+            date: '2015',
+        },
+        {
+            title: 'The best vds',
+            description: 'I have participated in the race and won the 1st place with my horse',
+            location: 'Windsdor races',
+            date: '201dv',
+        }
+    ];
+
 #award
 .award
     .award__header=awardHeader
+    each award in awardList
+        .award__card
+            .award__icon
+                span.my-cv__icon--trophy
+            .award__title=award.title
+
+            .award__icon
+                span.my-cv__icon--info
+            .award__description=award.description
+
+            .award__icon
+                span.my-cv__icon--map
+            .award__location=award.location
+
+            .award__icon
+                span.my-cv__icon--calendar
+            .award__date=award.date
